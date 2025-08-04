@@ -1,20 +1,185 @@
-# EvoTech-languages
-Localization files for MediaNav EvoTech mod.
+# Praktika Clone - Ücretsiz Dil Öğrenme Uygulaması
 
-NB. Text lines MUST not exceed 30 characters for check boxes description and 40 characters for full line buttons.
-Arrays with days and month don't have such limitations.
-Line 4003 MUST NOT be translated. It defines date format and {day},{month},{year} must remain as is since system searches exactly for these strings. Popup boxes strings must have reasonable size as well not to go out of popup box edges. These strings can be multi-line. Use \r\n as line terminator. Don't use double quote " since it is special symbol. Use quote ' instead.
-Don't modify line LANGUAGE LANG_KOREAN, SUBLANG_KOREAN. Korean language is OK here and must not be changed.
+Praktika Clone, orijinal Praktika uygulamasının tamamen ücretsiz bir klonudur. Bulgarca dahil 9 farklı dil desteği ile kelime öğrenmeyi kolaylaştırır.
 
-Помните! Длина строк не должна превышать 30 знаков для строк описывающих переключатели (вкл/выкл) и 40 знаков для полно размерных кнопок. Строки с днями недели и месяцами не имеют этого ограничения. Строки с информацией для всплывающих окон так же должны иметь размер умещающийся в эти окна. Они могут иметь несколько строк. Для перехода на следующую строку используйте символ перевода строки \r\n. Внутри строки не используйте двойные кавычки " так как это служебный символ, используйте вместо них одинарные '.
-Не нужно переводить строку 4003. Это формат для даты. Там должны остаться {day},{month},{year}. Система ищет именно их.
-Строку LANGUAGE LANG_KOREAN, SUBLANG_KOREAN тоже не нужно менять, пусть вас не смущает корейский язык.
+## 🌟 Özellikler
 
-# How to build
+- **Tamamen Ücretsiz**: Hiçbir ödeme veya abonelik gerektirmez
+- **Bulgarca Desteği**: Diğer diller arasında bulunmayan Bulgarca dili eklendi
+- **9 Dil Desteği**: İngilizce, İspanyolca, Fransızca, Almanca, Bulgarca, İtalyanca, Portekizce, Rusça
+- **İnteraktif Dersler**: Kelime öğrenme için kapsamlı dersler
+- **Telaffuz Desteği**: Her kelime için telaffuz rehberi
+- **Quiz Sistemi**: Öğrenilen kelimeleri test etmek için interaktif quizler
+- **İlerleme Takibi**: Öğrenme ilerlemenizi takip edin
+- **Pratik Modu**: Flashcard ve liste görünümü ile pratik yapın
+- **Modern UI**: Kullanıcı dostu ve modern arayüz
 
-You need ResourceHacker in order to build. It can be downloaded from http://www.angusj.com/resourcehacker/ . Download it and add to path or copy to bin folder.
-Run "bin\addStrings.bat \<source path\> \<destination path\>" where \<source path\> is a path where original 9.1.3 unpacked firmware resides(there should be folder upgrade), \<destination path\> is a path where to place newly built language dlls.
+## 📱 Desteklenen Diller
 
-Для сборки вам понадобится программа ResourceHacker, которую можно скачать по ссылке http://www.angusj.com/resourcehacker/ . Скачайте ее и распакуйте, добавьте в путь или поместите в папку bin.
-Запустите "bin\addStrings.bat \<source path\> \<destination path\>", тут \<source path\> папка, где находится распакованная оригинальная прошивка 9.1.3 (в этой папке должна быть папка upgrade), \<destination path\> папка куда нужно поместить вновь скомпилированные файлы локализации.
+- 🇺🇸 İngilizce (English)
+- 🇪🇸 İspanyolca (Español)
+- 🇫🇷 Fransızca (Français)
+- 🇩🇪 Almanca (Deutsch)
+- 🇧🇬 **Bulgarca (Български)** - Yeni eklendi!
+- 🇮🇹 İtalyanca (Italiano)
+- 🇵🇹 Portekizce (Português)
+- 🇷🇺 Rusça (Русский)
+
+## 🚀 Kurulum
+
+### Gereksinimler
+
+- Node.js (v16 veya üzeri)
+- React Native CLI
+- Android Studio (Android geliştirme için)
+- JDK 11 veya üzeri
+
+### Adımlar
+
+1. **Projeyi klonlayın:**
+```bash
+git clone <repository-url>
+cd praktika-clone
+```
+
+2. **Bağımlılıkları yükleyin:**
+```bash
+npm install
+```
+
+3. **Android için gerekli dosyaları oluşturun:**
+```bash
+npx react-native run-android
+```
+
+4. **Uygulamayı başlatın:**
+```bash
+npm start
+```
+
+## 📚 Kullanım
+
+### Ana Sayfa
+- Dil seçimi yapın
+- Genel istatistiklerinizi görün
+- Özellikler hakkında bilgi alın
+
+### Dersler
+- Seçtiğiniz dildeki dersleri görün
+- Her ders için kelime listesi ve telaffuz
+- İlerleme takibi
+
+### Pratik
+- **Flashcard Modu**: Kelime kartları ile pratik
+- **Liste Modu**: Öğrenilen kelimelerin listesi
+- **İstatistikler**: Öğrenme istatistikleriniz
+
+### Quiz
+- Ders tamamlandıktan sonra quiz yapın
+- Çoktan seçmeli sorular
+- Anlık geri bildirim
+- Başarı oranı takibi
+
+### Profil
+- Genel istatistikler
+- Dil bazında ilerleme
+- Ayarlar (bildirimler, ses, karanlık mod)
+- İlerleme sıfırlama
+
+## 🏗️ Proje Yapısı
+
+```
+src/
+├── data/
+│   └── languages.js          # Dil verileri ve Bulgarca kelimeler
+├── screens/
+│   ├── HomeScreen.js         # Ana sayfa
+│   ├── LessonsScreen.js      # Ders listesi
+│   ├── LessonDetailScreen.js # Ders detayı
+│   ├── QuizScreen.js         # Quiz ekranı
+│   ├── PracticeScreen.js     # Pratik ekranı
+│   └── ProfileScreen.js      # Profil ekranı
+└── App.js                    # Ana uygulama bileşeni
+```
+
+## 🇧🇬 Bulgarca Desteği
+
+Bulgarca dili için özel olarak oluşturulan içerik:
+
+### Dersler:
+1. **Основни Поздрави** (Temel Selamlaşma)
+2. **Числа** (Sayılar)
+3. **Цветове** (Renkler)
+4. **Семейство** (Aile)
+5. **Храни и Напитки** (Yiyecek ve İçecekler)
+
+### Özellikler:
+- Doğru telaffuz rehberi
+- Türkçe çeviriler
+- Kapsamlı kelime listesi
+- İnteraktif öğrenme deneyimi
+
+## 🛠️ Teknik Detaylar
+
+- **Framework**: React Native 0.72.6
+- **Navigation**: React Navigation v6
+- **State Management**: React Hooks + AsyncStorage
+- **UI Components**: Custom components with Material Design
+- **Platform**: Android (iOS desteği eklenebilir)
+
+## 📦 Bağımlılıklar
+
+```json
+{
+  "react": "18.2.0",
+  "react-native": "0.72.6",
+  "react-native-vector-icons": "^10.0.0",
+  "react-native-async-storage": "^1.19.5",
+  "@react-navigation/native": "^6.1.7",
+  "@react-navigation/stack": "^6.3.17",
+  "@react-navigation/bottom-tabs": "^6.5.8"
+}
+```
+
+## 🎯 Hedefler
+
+- [x] Tamamen ücretsiz uygulama
+- [x] Bulgarca dil desteği
+- [x] İnteraktif dersler
+- [x] Quiz sistemi
+- [x] İlerleme takibi
+- [x] Modern UI/UX
+- [x] Telaffuz desteği
+- [ ] Ses dosyaları entegrasyonu
+- [ ] iOS desteği
+- [ ] Offline mod
+- [ ] Sosyal özellikler
+
+## 🤝 Katkıda Bulunma
+
+1. Projeyi fork edin
+2. Feature branch oluşturun (`git checkout -b feature/AmazingFeature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
+4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
+5. Pull Request oluşturun
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
+
+## 🙏 Teşekkürler
+
+- Orijinal Praktika uygulamasına ilham kaynağı olduğu için
+- React Native topluluğuna
+- Açık kaynak projelere katkıda bulunan herkese
+
+## 📞 İletişim
+
+Sorularınız veya önerileriniz için:
+- GitHub Issues
+- Email: [your-email@example.com]
+
+---
+
+**Not**: Bu uygulama eğitim amaçlı geliştirilmiştir ve orijinal Praktika uygulamasının bir klonudur. Tüm özellikler tamamen ücretsizdir.
 
